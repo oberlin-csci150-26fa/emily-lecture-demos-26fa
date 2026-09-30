@@ -1,16 +1,20 @@
 import random
 
+def display_animal(c):
+	"""
+	given a number, return the corresponding animal
+	"""
+
+	animal = ''
+	if c == 0:
+		animal = '_/\__/\__0>' # worm
+	elif c == 1:
+		animal = '=^..^=' # cat
+	else:
+		animal = '(0.0)' # owl	
+
+	return animal
+
 print('Welcome to the text animal generator!')
-
-# randomly select one of the premade animals
-choice = random.randint(0, 2)
-
-animal = ''
-if choice == 0:
-	animal = '_/\__/\__0>' # worm
-elif choice == 1:
-	animal = '=^..^=' # cat
-else:
-	animal = '(0.0)' # owl
-
-print(animal)
+choice = int(input("Choose 0, 1, or 2:"))
+print(display_animal(choice))
