@@ -28,3 +28,16 @@ return input[-1] + input[:-1]
 return input[-1] + rev(input[:-1])
 
 """
+
+def rev(w):
+  """ recursive function for reversing a string """
+  # base case
+  if len(w) == 0:
+    return ""
+  # not base case
+  #reverse of everything else + # first letter put at the end
+  return rev(w[1:]) + w[0]
+
+print(rev("racecar"))
+print(rev("nascar"))
+print(rev("flugelhorn"))
